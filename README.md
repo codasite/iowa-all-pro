@@ -1,43 +1,87 @@
-# Astro Starter Kit: Minimal
+# Iowa All Pro - WordPress to Astro Conversion
 
-```sh
-npm create astro@latest -- --template minimal
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This project converts an Oxygen/WordPress website to a modern Astro static site.
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
+```
 /
-├── public/
+├── public/                 # Static assets
 ├── src/
-│   └── pages/
-│       └── index.astro
+│   ├── components/         # Reusable Astro components
+│   ├── layouts/           # Page layouts
+│   ├── pages/             # Astro pages (file-based routing)
+│   ├── scripts/           # Conversion utilities
+│   ├── styles/            # Global styles
+│   └── data/              # Static data files
+├── wordpress-export/      # WordPress export files
+├── astro.config.mjs       # Astro configuration
 └── package.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🛠️ Setup
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-Any static assets, like images, can be placed in the `public/` directory.
+2. **Start development server:**
+   ```bash
+   npm run dev
+   ```
 
-## 🧞 Commands
+3. **Build for production:**
+   ```bash
+   npm run build
+   ```
 
-All commands are run from the root of the project, from a terminal:
+## 📦 WordPress Conversion Process
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Step 1: Export WordPress Content
+- Export your WordPress site using the built-in export tool
+- Place the export file in the `wordpress-export/` directory
 
-## 👀 Want to learn more?
+### Step 2: Convert Content
+- Use the conversion scripts in `src/scripts/` to process WordPress content
+- Convert HTML to Markdown and extract assets
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Step 3: Migrate Assets
+- Copy images and media files to the `public/` directory
+- Update image references in converted content
+
+### Step 4: Build Astro Site
+- Create Astro pages and components
+- Implement responsive design with Tailwind CSS
+- Test and optimize performance
+
+## 🧞 Available Commands
+
+| Command                | Action                                           |
+| :--------------------- | :----------------------------------------------- |
+| `npm install`          | Installs dependencies                            |
+| `npm run dev`          | Starts local dev server at `localhost:4321`      |
+| `npm run build`        | Build your production site to `./dist/`          |
+| `npm run preview`      | Preview your build locally, before deploying     |
+| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
+
+## 🎨 Technologies Used
+
+- **Astro** - Static site generator
+- **Tailwind CSS** - Utility-first CSS framework
+- **TypeScript** - Type safety
+- **Cheerio** - HTML parsing for WordPress content
+- **Turndown** - HTML to Markdown conversion
+
+## 📝 Next Steps
+
+1. Export your WordPress site
+2. Run conversion scripts
+3. Customize the design and layout
+4. Deploy to your hosting platform
+
+## 👀 Resources
+
+- [Astro Documentation](https://docs.astro.build)
+- [Tailwind CSS](https://tailwindcss.com)
+- [WordPress Export Guide](https://wordpress.org/support/article/tools-export-screen/)
