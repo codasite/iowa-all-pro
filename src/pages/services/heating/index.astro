@@ -1,0 +1,12 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+const contentHtml = "<html><head></head><body><div class=\"ct-section-inner-wrap\"><h1 id=\"headline-5-54\" class=\"ct-headline pageheading\"><span id=\"span-6-54\" class=\"ct-span\">Heating</span></h1></div></body></html>";
+const headStyles = ["https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,400,500,600,700,800,900|Roboto+Slab:100,200,300,400,500,600,700,800,900|urw-din:100,200,300,400,500,600,700,800,900|Montserrat:100,200,300,400,500,600,700,800,900|din-condensed:100,200,300,400,500,600,700,800,900","/wp-content/plugins/oxygen/component-framework/vendor/aos/aos.css?ver=6.8.2","/wp-content/plugins/oxygen/component-framework/oxygen.css?ver=4.9.1","/wp-content/uploads/oxygen/css/16.css?cache=1753308598&ver=6.8.2","/wp-content/uploads/oxygen/css/145.css?cache=1753308590&ver=6.8.2","/wp-content/uploads/oxygen/css/54.css?cache=1753308596&ver=6.8.2","/wp-content/uploads/oxygen/css/universal.css?cache=1754085891&ver=6.8.2"];
+---
+
+<Layout title={"Heating - Iowa All Pro HVAC"}>
+  
+    {headStyles.map((href) => (<link slot="head" rel="stylesheet" href={href} />))}
+  
+  <main set:html={contentHtml} />
+</Layout>

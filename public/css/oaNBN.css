@@ -1,0 +1,95 @@
+.citiesServiceColumn {
+    float: left;
+    min-width: 130px;
+}
+
+.citiesServiceWrap {
+    display: table;
+    margin: 0 auto 30px;
+}
+
+.serviceColumn
+{
+	float: left;
+}
+
+.serviceWrap { 
+display: table;
+margin: 0 auto 30px;
+}  /* This is to resolve the current NBN city script from breaking due to float as well as centering the city list  */
+
+li.nnp-rv-lgi {
+border: none !important;
+border-radius: 10px;
+margin-top: 5px;
+}
+
+li.nnp-rv-lgi .pull-right {
+padding-left: 10px;
+}
+
+div.nnp-rv-minimap2 {
+box-shadow: none !important;
+}
+
+div.location.float-child {
+align-self: center;
+}
+
+.nnp-cont-left {
+    container: left / inline-size;
+}
+@container left (max-width: 515px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 850px){
+
+.nnp-review-outer-cont .flex-container .flex-child:last-child {
+margin: auto;
+}
+
+.nnp-review-outer-cont .nnp-cont-right, .nnp-review-outer-cont .nnp-cont-left {
+width: 100%;
+margin: auto;
+}
+}
+
+.nnp-rv-footer .flex-container {
+    gap: 10px;
+}
+
+div.nnp-rv-footer {
+    display: table;
+}
+
+li.nnp-rv-lgi {
+    border-radius: 10px !important;
+}
+
+li.nnp-rv-lgi .pull-right {
+    padding-left: clamp(10px, 2vw, 25px) !important;
+}
+
+.nnp-rv-footer .flex-container .flex-child:last-child {
+margin-left: 0 !important;
+}
+
+div.nnp-rv-stars > span:nth-child(2) {
+top: 0 !important;
+}
+
+span.nnp-rv-star-icons {
+    text-align: center;
+    display: block;
+}
+
+.nnp-rv-stars blockquote {
+    padding: 0;
+}
+
+.nnp-rv-header figure {
+    margin: 0 0 1rem;
+}

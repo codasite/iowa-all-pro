@@ -1,0 +1,20 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  href: string;
+  iconSymbol?: string;
+}
+const { title, description, href, iconSymbol } = Astro.props as Props;
+---
+
+<article class="r-home-grid-item-container rounded-xl border border-gray-200 p-6 bg-white">
+  {iconSymbol && (
+    <div class="r-home-grid-item-icon mb-3 text-gray-900">
+      <svg class="inline-block h-6 w-6 align-middle"><use xlink:href={`#${iconSymbol}`} /></svg>
+    </div>
+  )}
+  <h3 class="ct-headline republic-h3 text-xl font-semibold text-gray-900">{title}</h3>
+  <p class="ct-text-block republic-p1 mt-2 text-gray-700 text-sm">{description}</p>
+  <a href={href} class="ct-link-text mt-4 inline-flex font-medium underline underline-offset-4">Learn More</a>
+</article>

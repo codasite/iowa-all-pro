@@ -4,7 +4,7 @@ export interface Props {
   description?: string;
 }
 
-const { title, description = "Iowa All Pro - Professional Services" } = Astro.props;
+const { title, description = "Iowa All Pro - Professional Services" } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
@@ -16,8 +16,10 @@ const { title, description = "Iowa All Pro - Professional Services" } = Astro.pr
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    
+    <slot name="head" />
   </head>
-  <body>
+  <body class="oxygen-body">
     <slot />
   </body>
 </html>

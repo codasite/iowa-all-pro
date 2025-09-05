@@ -1,0 +1,13 @@
+---
+import ServiceCard from './ServiceCard.astro';
+import { services } from '../data/services';
+---
+
+<section class="ct-section" aria-labelledby="our-services">
+  <div class="ct-section-inner-wrap">
+    <h2 id="our-services" class="ct-headline republic-h2-display">Our Services</h2>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" id="div_block-121-143">
+      {services.map((s) => <ServiceCard {...s} />)}
+    </div>
+  </div>
+</section>
