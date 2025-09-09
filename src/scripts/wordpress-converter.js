@@ -2,11 +2,13 @@ import fs from 'fs';
 import path from 'path';
 import * as cheerio from 'cheerio';
 import TurndownService from 'turndown';
+import { execSync } from 'child_process';
 
 /**
  * WordPress to Astro Content Converter
  * 
  * This script helps convert WordPress content to Astro-compatible format
+ * Uses the Python converter for full WordPress REST API integration
  */
 
 class WordPressConverter {
@@ -78,23 +80,45 @@ class WordPressConverter {
   }
 
   /**
-   * Process WordPress export file
-   * @param {string} exportPath - Path to WordPress export file
+   * Run the Python WordPress converter
+   * @param {string} wpUrl - WordPress site URL
    * @param {string} outputDir - Output directory for converted content
    */
-  async processWordPressExport(exportPath, outputDir) {
+  async runPythonConverter(wpUrl, outputDir = 'src/content') {
     try {
-      console.log(`Processing WordPress export: ${exportPath}`);
-      
-      // This would need to be implemented based on the specific export format
-      // Could be XML, JSON, or other formats depending on the export method
-      
+      console.log(`🚀 Running Python WordPress converter...`);
+      console.log(`WordPress URL: ${wpUrl}`);
       console.log(`Output directory: ${outputDir}`);
-      console.log('WordPress export processing not yet implemented');
-      console.log('Please provide the WordPress export file for processing');
+      
+      // Run the Python converter
+      const command = `python3 wordpress-converter.py "${wpUrl}" "${outputDir}"`;
+      execSync(command, { stdio: 'inherit' });
+      
+      console.log('✅ Python conversion completed successfully!');
       
     } catch (error) {
-      console.error('Error processing WordPress export:', error);
+      console.error('❌ Error running Python converter:', error.message);
+      throw error;
+    }
+  }
+
+  /**
+   * Process WordPress site using REST API
+   * @param {string} wpUrl - WordPress site URL
+   * @param {string} outputDir - Output directory for converted content
+   */
+  async processWordPressSite(wpUrl, outputDir = 'src/content') {
+    try {
+      console.log(`Processing WordPress site: ${wpUrl}`);
+      
+      // Use the Python converter for full REST API integration
+      await this.runPythonConverter(wpUrl, outputDir);
+      
+      console.log(`Output directory: ${outputDir}`);
+      console.log('WordPress site processing completed!');
+      
+    } catch (error) {
+      console.error('Error processing WordPress site:', error);
     }
   }
 }
