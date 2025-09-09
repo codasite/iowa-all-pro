@@ -4,7 +4,7 @@ export interface Props {
   description?: string;
 }
 
-const { title, description = "Iowa All Pro - Professional Services" } = Astro.props;
+const { title, description = "Iowa All Pro - Professional Services" } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>

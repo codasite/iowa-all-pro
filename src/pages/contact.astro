@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+<<<<<<< HEAD
 
 const title = "Contact - Iowa All Pro HVAC";
 const description = '';
@@ -10,3 +11,38 @@ const description = '';
     <div set:html={`<div class="ct-inner-content" id="inner_content-3-79"><section class="ct-code-block" id="code_block-6-35"><script src="https://form.jotform.com/jsform/251345895033156" type="text/javascript"></script></section><section class="ct-section" id="section-3-35"><div class="ct-section-inner-wrap"><h2 class="ct-headline onepage-heading-two" data-aos="fade-down" id="headline-4-35">Call Us Today</h2><a class="ct-link-text dayton-primary-button" href="tel:(515)%20550-4822" id="link_text-5-35" target="_self">Call (515) 550-4822</a></div></section></div>`} />
   </div>
 </Layout>
+=======
+---
+
+<Layout title="Contact - Iowa All Pro">
+  <main>
+    <section class="bg-white">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 py-16">
+        <h1 class="text-4xl font-bold text-gray-900">Contact Us</h1>
+        <p class="mt-4 text-gray-600">Need service or a quote? Send us a message and we’ll get back within one business day.</p>
+        <form class="mt-10 grid gap-6">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Name</label>
+              <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-gray-900 focus:ring-gray-900" type="text" placeholder="Your name" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Email</label>
+              <input class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-gray-900 focus:ring-gray-900" type="email" placeholder="you@example.com" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Message</label>
+            <textarea class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-gray-900 focus:ring-gray-900" rows="5" placeholder="How can we help?" />
+          </div>
+          <div>
+            <button type="submit" class="inline-flex items-center rounded-md bg-gray-900 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-gray-800">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+
+>>>>>>> 9867f242e52dedbbe9a76d64fc0d9dbd68e6c99d

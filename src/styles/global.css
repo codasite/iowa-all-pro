@@ -1,1 +1,9 @@
-@import "tailwindcss";
+@import "tailwindcss/utilities";
+
+/* Global font: Roboto Slab (loaded via headStyles) */
+html {
+  font-family: "Roboto Slab", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+body {
+  font-family: inherit;
+}
