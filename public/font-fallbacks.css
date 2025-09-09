@@ -1,0 +1,71 @@
+/* Font fallbacks for custom fonts not available on Google Fonts */
+.republic-h2-display,
+.republic-h3-display {
+  font-family: 'urw-din', 'Arial Black', Arial, sans-serif !important;
+}
+
+.din-condensed {
+  font-family: 'din-condensed', 'Arial Narrow', Arial, sans-serif !important;
+}
+
+/* Ensure all custom font classes have proper fallbacks */
+[class*="republic-"] {
+  font-family: 'Roboto Slab', 'Arial Black', Arial, sans-serif !important;
+}
+
+/* Override any urw-din references */
+* {
+  font-family: inherit;
+}
+
+.republic-h2-display {
+  font-family: 'Roboto Slab', 'Arial Black', Arial, sans-serif !important;
+  font-weight: 900 !important;
+  font-size: 64px !important;
+  line-height: 1 !important;
+}
+
+@media (max-width: 991px) {
+  .republic-h2-display {
+    font-size: 48px !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .republic-h2-display {
+    font-size: 32px !important;
+    text-align: center !important;
+  }
+}
+
+.republic-h3 {
+  font-family: 'Roboto Slab', Arial, sans-serif !important;
+  font-size: 28px !important;
+  text-align: center !important;
+  line-height: 1.2 !important;
+}
+
+@media (max-width: 479px) {
+  .republic-h3 {
+    font-size: 20px !important;
+  }
+}
+
+.republic-h3-display {
+  font-family: 'Roboto Slab', Arial, sans-serif !important;
+  font-size: 48px !important;
+  line-height: 1 !important;
+  color: #000000 !important;
+}
+
+@media (max-width: 991px) {
+  .republic-h3-display {
+    font-size: 32px !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .republic-h3-display {
+    font-size: 24px !important;
+  }
+}
